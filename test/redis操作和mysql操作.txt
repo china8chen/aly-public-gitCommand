@@ -1,0 +1,26 @@
+jenkins启动
+nohup /usr/bin/java -jar /usr/local/Cellar/jenkins/2.76/libexec/jenkins.war &
+
+redis 启动
+redis-server ../redis.conf
+redis连接
+ redis-cli -h 192.168.1.103 -p 6379 
+keys * 获得所有key
+keys *1234* 获取包含1234的key
+select 1  选择数据库
+hgetall "{\"agent\":\"magic.data.role.Role\",\"uniqueKey\":\"idkey[5431030713325743104]\"}"
+获取key 对应的所有value
+hget "{\"agent\":\"magic.data.role.Role\",\"uniqueKey\":\"idkey[5431030713325743104]\"}" unlockHeroMap
+获取value中的某一个key对应的value值   
+
+
+mysql操作：
+mysql连接：
+mysql -h172.21.60.166 -ustrom -p 
+
+建立数据库时可以使用以下命令：
+create database app_relation character set utf8; 
+use app_relation;
+source app_relation.sql;
+修改数据库编码的命令为：
+alter database app_relation character set utf8;
